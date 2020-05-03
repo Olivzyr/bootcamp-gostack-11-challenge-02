@@ -28,7 +28,7 @@
       <a href="#license">License</a>
       <br />
       <br />
-      <p align="center"> <strong>GoStack - Challenge 02: Back-end with Node.js</strong></p>
+      <p align="center"> <strong>GoStack#11 - Challenge 02: Back-end with Node.js</strong></p>
    </p>
 
 </p>
