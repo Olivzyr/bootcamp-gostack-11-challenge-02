@@ -35,11 +35,6 @@
 ## **About the Challenge**
 #### Create an API from scratch to store some repositories to my portfolio using nodejs to create, list, update and remove some repositories also some repositores have a possibility to receive "likes".
 #### Objective: Create new functionalities on this teamplate basead on content view in module 01 about nodejs.
-
----
-## Project in Video
-
-#### To see project function in video please click [here][projectFunctionInVideo]
 ---
 # Resources and Procedures
 ---
