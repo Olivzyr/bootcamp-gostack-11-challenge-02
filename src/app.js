@@ -30,18 +30,30 @@ app.post("/repositories", (request, response) => {
 
 app.put("/repositories/:id", (request, response) => {
   const { id } = request.params;
+
+  // Armazenando as requisições do body em trÊs variáveis
   const { title, url, techs } = request.body;
 
-  const repository = { title, url, techs };
 
-  // Verificando se possui algum repositório com id informado
-  if (repositories.id !== id) {
-    return response.json({ error: 'Not have a project with this ID'})
-  }
+  // Busca o projeto de acordo com o id informado na rota
+  const repositoryIndex = repositories.findIndex(repository => repository.id === id);
 
-  repositories[id].splice(repository, 1);
+  // Verifica se existe algum projeto com o id informado na rota para selecionar e editar algum projeto
+  if(repositoryIndex < 0) {
+    return response.status(400).json({ error: 'Not have a project with this ID'});
+  };
 
-  return response.json(repository)
+  // Unificando as três variáveis do body em um objeto chamado "project"
+  const repository = { 
+    title, 
+    url, 
+    techs 
+  };
+
+  // atribuindo os novos valores para um projeto presente no array
+  repositories[repositoryIndex] = repository;
+
+  return response.json(repository);
 
 });
 
