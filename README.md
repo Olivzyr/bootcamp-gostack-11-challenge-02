@@ -6,7 +6,11 @@
 
 <p align="center">
   <br />
+  <img src="https://img.shields.io/github/issues/SkullDarth/bootcamp-gostack-11-challenge-02">
+  <img src="https://img.shields.io/github/forks/SkullDarth/bootcamp-gostack-11-challenge-02">
   <img src="https://img.shields.io/badge/made%20by-SkullDarth-lightgrey">
+  <img src="https://img.shields.io/github/stars/SkullDarth/bootcamp-gostack-11-challenge-02">
+  <img src="https://img.shields.io/github/license/SkullDarth/bootcamp-gostack-11-challenge-02">
   
 
   <!-- Indice personalizado -->
@@ -123,7 +127,7 @@ This project is under the MIT license. See the [LICENSE](./LICENSE) for more inf
 
 ---
 
-#### Made by Yan Oliveira [Get in touch!][MylinkedIn]
+#### Made with 💙 by Yan Oliveira [Get in touch!][MylinkedIn] 🖖
 
 <!-- Hiperlinks structure to base -->
 <!-- Just refer the link using this sintax: "[challenger 02][challenge02]" -->
