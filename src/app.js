@@ -48,7 +48,8 @@ app.put("/repositories/:id", (request, response) => {
     id: uuid(),
     title, 
     url, 
-    techs
+    techs,
+    likes: 0
   };
 
   // atribuindo os novos valores para um projeto presente no array
@@ -73,7 +74,36 @@ app.delete("/repositories/:id", (request, response) => {
 });
 
 app.post("/repositories/:id/like", (request, response) => {
-  // TODO
+  const { id } = request.params;
+
+  const repositoryIndex = repositories.findIndex( repository => repository.id === id);
+
+  if (repositoryIndex < 0) {
+    return response.status(400).json({ error: 'Dont have any project with this ID'});
+  };
+
+  // Capturando o total de likes presente em um repositório
+  let like = repositories[repositoryIndex].likes
+
+  // Adicionando um like para o total de likes do repositorio
+  like = like + 1;
+
+  // Capturando as informações do repositorio salvo 
+  const { title, url, techs } = repositories[repositoryIndex];
+
+  // Estrutura do repositório adicionando um like
+  const repository = {
+    id,
+    title,
+    url,
+    techs,
+    likes: like
+  };
+
+  // Atribuindo o mesmo repositório com a quantidade atualizada de likes
+  repositories[repositoryIndex] = repository;
+  
+  return response.json(repository);
 });
 
 module.exports = app;
