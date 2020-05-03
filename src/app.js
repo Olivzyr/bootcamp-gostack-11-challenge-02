@@ -45,9 +45,10 @@ app.put("/repositories/:id", (request, response) => {
 
   // Unificando as três variáveis do body em um objeto chamado "project"
   const repository = { 
+    id: uuid(),
     title, 
     url, 
-    techs 
+    techs
   };
 
   // atribuindo os novos valores para um projeto presente no array
@@ -58,7 +59,17 @@ app.put("/repositories/:id", (request, response) => {
 });
 
 app.delete("/repositories/:id", (request, response) => {
-  // TODO
+  const  id  = request.params;
+
+  const repositoryIndex = repositories.findIndex( repository => repository.id === id.id );
+
+  if (repositoryIndex < 0) {
+    return response.status(400).json({ error: 'Dont have any repository using this ID'})
+  };
+
+  const deletedRepository = repositories.splice(repositoryIndex, 1);
+
+  return response.status(204).json(deletedRepository);
 });
 
 app.post("/repositories/:id/like", (request, response) => {
