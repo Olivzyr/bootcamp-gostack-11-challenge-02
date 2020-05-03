@@ -89,7 +89,22 @@ $ yarn tree -l 4 -o out.txt --ignore node_modules,.gitignore,.gitattributes
 
 ```bash
 
-#Generate project tree and insert here
+├── LICENSE
+├── README.md
+├── jest.config.js
+├── nodemon.json
+├── package.json
+├── src
+|  ├── __tests__
+|  |  ├── likes.spec.js
+|  |  └── repositories.spec.js
+|  ├── app.js
+|  └── server.js
+└── yarn.lock
+
+directory: 1104 file: 4615
+
+ignored: directory (84)
 
 ```
 ---
