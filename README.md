@@ -139,7 +139,7 @@ This project is under the MIT license. See the [LICENSE](./LICENSE) for more inf
 [yarn]: https://yarnpkg.com/
 [npm]: #
 
-[project-in-function]: https://www.notion.so/yanbrito/Desafio-2-Conceitos-do-Node-js-69a451b1b0eb46f1a0e39b02e68491ea#669a227176cf494c85000701a544f180
+[project-in-function]: https://user-images.githubusercontent.com/16024701/80922031-ab5b2a00-8d50-11ea-9920-8657db4fba42.gif
 
 [initialized-project]: #
 [project-in-function-02]: #
